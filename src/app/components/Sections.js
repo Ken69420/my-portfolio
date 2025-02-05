@@ -37,7 +37,7 @@ export default function Sections() {
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
-        <p className="text-lg px-10">
+        <p className="text-base md:text-lg px-4 md:px-10">
           Hi, I'm Daniel 'Imran, a passionate software engineering student with
           a lifelong love for technology. My journey into the tech world began
           at an early age, inspired by my father, who introduced me to the
@@ -54,11 +54,11 @@ export default function Sections() {
           educate the community. Staying updated with the latest tech trends and
           participating in forums are some of my favorite activities, allowing
           me to constantly learn and share insights with like-minded
-          enthusiasts. With a strong foundation and a curious mind, IWith a
-          strong foundation and a curious mind, I’m always eager to explore new
-          challenges and contribute to impactful technological advancements.m
-          always eager to explore new challenges and contribute to impactful
-          technological advancements.
+          enthusiasts. With a strong foundation and a curious mind, With a
+          strong foundation and a curious mind, I&apos;m always eager to explore
+          new challenges and contribute to impactful technological
+          advancements.m always eager to explore new challenges and contribute
+          to impactful technological advancements.
         </p>
       </section>
 
@@ -69,7 +69,7 @@ export default function Sections() {
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold mb-6">Skills</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex space-x-8 max-w-full overflow-x-auto px-4 overflow-hidden">
           {[
             {
               category: "Languages",
@@ -111,23 +111,23 @@ export default function Sections() {
                 "OOP",
                 "REST APIs",
                 "Software Design Pattern",
-                "Software Desgin Architecture",
+                "Software Design Architecture",
                 "Blockchain",
                 "UI/UX",
                 "Data Structures",
                 "Cybersecurity",
               ],
             },
-          ].map((item) => (
+          ].map((item, index) => (
             <div
-              key={item.category}
-              className="bg-gray-900 shadow-lg rounded-lg p-8 text-left text-white w-full md:w-1/3 lg:w-1/4"
-              data-aos="zoom-in" // Add zoom-in animation for each skill card
+              key={index}
+              className="bg-gray-900 shadow-lg rounded-lg p-8 text-left text-white min-w-[200px] shrink-0"
+              data-aos="zoom-in"
             >
               <h3 className="text-xl font-semibold mb-4">{item.category}</h3>
               <ul className="list-disc pl-5">
-                {item.skills.map((skill) => (
-                  <li key={skill} className="text-gray-300">
+                {item.skills.map((skill, idx) => (
+                  <li key={idx} className="text-gray-300">
                     {skill}
                   </li>
                 ))}
@@ -315,7 +315,7 @@ export default function Sections() {
             <FaInstagram size={30} />
           </a>
           <a
-            href="https://github.com/Ken69420"
+            href="https://github.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400 transition-colors"

@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <title>Daniel Imran</title>
       </Head>
-      <div className="scroll-smooth relative overflow-hidden">
+      <div className="scroll-smooth relative">
         <ParticleBackground />
         <Navbar />
         <Sections />
