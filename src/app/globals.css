@@ -2,20 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Ensure sections take up full viewport height */
+section {
+  height: 100vh;
+  scroll-snap-align: start; /* Align sections for scroll snapping */
+  overflow: hidden; /* Prevent internal scrolling */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Remove default margin and padding from body and html */
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+}
+
+.active {
+  @apply bg-green-900 rounded-lg px-2 py-1 transition-all duration-300 ease-in-out;
+}
+
+/* General Body Font */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #e0e0e0; /* Light gray for readability */
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Fira Code", monospace;
+  color: #00ff00; /* Neon green for headings */
+}
+
+/* Links */
+a {
+  color: #00ffff; /* Cyan for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8a2be2; /* Purple on hover */
+}
+
+/* Gradient Heading Example */
+.gradient-heading {
+  font-family: "Space Mono", monospace;
+  background: linear-gradient(90deg, #00ff00, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
 }
