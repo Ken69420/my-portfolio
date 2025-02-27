@@ -215,7 +215,7 @@ export default function Sections() {
           <p className="text-lg text-gray-400">
             International Islamic University Malaysia, 2025
             <br />
-            GPA: 3.47/4.0
+            GPA: 3.52/4.0
           </p>
           <h4 className="text-xl font-bold mt-6">Related Coursework</h4>
           <ul className="list-disc pl-5 text-gray-300">
