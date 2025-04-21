@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dewn.my
+
+# Sitemaps
+Sitemap: https://dewn.my/sitemap.xml
